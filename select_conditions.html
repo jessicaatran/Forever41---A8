@@ -1,0 +1,76 @@
+<!-- login to existing account: enter email and password -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forever 41</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+  </head>
+  <body>
+    <!-- header -->
+    <nav id="navbar" class="navbar">
+      <i class="fa fa-chevron-left" aria-hidden="true" id="back-join"></i>
+      <span class="navbar-brand mb-0 h1">Select Conditions</span>
+      <i id="help" class="fa fa-question-circle" aria-hidden="true"></i></span>
+    </nav>
+    </nav>
+    <br>
+    <div class="col-sm-12 select2-conditions">
+        <label id="l">Enter your conditions</label>
+        <br>
+        <!-- Note the missing multiple attribute! -->
+        <select class="select2-multiple" id="select2-conditions" name="conditions[]" multiple="multiple">
+            <option value="Anemia">Anemia</option>
+            <option value="Arthritis">Arthritis</option>
+            <option value="Back Pain">Back Pain</option>
+            <option value="High Cholesterol">High Cholesterol</option>
+            <!-- <option value="Dementia">Dementia</option> -->
+            <option value="Diabetes">Diabetes</option>
+            <option value="Fatigue">Fatigue</option>
+            <option value="High Blood Pressure">High Blood Pressure</option>
+            <option value="Ulcers">Ulcers</option>
+        </select>
+    </div>
+
+    <div class="col-sm-12">
+      <br>
+      <a class="btn btn-outline-dark float-left" href="./join_birth.html" role="button">Back</a>
+      <a class="btn btn-outline-dark float-right" id="finish" role="button">Finish</a>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          console.log('hello');
+          $('#select2-conditions').select2();
+        });
+        $('#finish').click(function() {
+          getConditions();
+        });
+    </script>
+
+    <script src="./javascript/js.js"></script>
+
+<!-- var users;
+if (localStorage.getItem('users') === null) {
+  console.log('empty: ' + JSON.stringify(localStorage));
+  users = [];
+} else {
+  users = JSON.parse(localStorage.getItem('users'));
+  console.log('hi, not empty:' + JSON.stringify(localStorage));
+} -->
+</body>
+</html>

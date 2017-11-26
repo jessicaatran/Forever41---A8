@@ -1,0 +1,88 @@
+<!-- login to existing account: enter email and password -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forever 41</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- header -->
+    <nav id="navbar" class="navbar">
+      <span class="navbar-brand mb-0 h1">Profile</span>
+      <span style="float:right;"><i class="fa fa-sign-out" aria-hidden="true"></i>
+      <i id="help" class="fa fa-question-circle" aria-hidden="true"></i></span>
+
+    </nav>
+    <br>
+    <div class=col-sm-12>
+      <img src="images/profpic2.jpg" class="img-fluid">
+      <br><br>
+      <h7 id='name'>Name: Daniel Zhang</h7> <br>
+      <h7 id='bday'>Birthday: 10/08/1977</h7><br>
+      <h7 id='gender'>Gender: M</h7><br>
+      <h7 id='email'>Email: dzkaiten@gmail.com</h7><br>
+      <a class="btn btn-outline-dark float-left" href="./edit_prof.html" role="button">Edit Profile</a>
+      <br>
+      <br>
+      <h6>My Conditions:</h6>
+      <ul id='my-conditions'>
+      </ul>
+      <a class="btn btn-outline-dark float-left" href="./edit_conditions.html" role="button">Edit Conditions</a>
+      <br><br><br><br><br>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Log out of Forever 41?</h4>
+          </div>
+          <div class="modal-body">
+            <button type="button" id="modal-logout" class="btn btn-danger">Log Out</button>
+            <button type="button" id="modal-cancel" class="btn btn-default">Cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- bottom nav bar -->
+    <nav id="bottom-nav-bar" class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
+      <!-- <div id="iconContainer">
+        <i id="dashButton_prof" class="fa fa-home fa-lg" aria-hidden="true"></i>
+      </div>
+      <div id="iconContainer">
+        <i id="profButton" class="fa fa-user fa-lg" aria-hidden="true"></i>
+      </div> -->
+      <ul class="nav">
+        <li class="nav-item" id="otherButton">
+          <a type="button" class="nav-link" href="./dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item" id="profileButton">
+          <a type="button" class="nav-link" href="profile.html">Profile</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="./javascript/js.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        displayProfile();
+      });
+    </script>
+
+
+
+  </body>
+  </html>
