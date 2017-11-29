@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- header -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar fixed-top">
       <i class="fa fa-chevron-left" aria-hidden="true" id="back"></i>
       <span class="navbar-brand mb-0 h1">Edit Profile</span>
       <span style="float:right;"><i class="fa fa-sign-out" aria-hidden="true"></i></i>
@@ -29,7 +29,7 @@
     </nav>
 
     <div class="col-sm-12">
-      <br>
+      <br><br><br>
       <img src="images/profpic2.jpg" class="img-fluid">
       <form action="./profile.html" onsubmit="save_data()" id="edit-form">
         <br>
@@ -54,7 +54,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-      
+
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -65,7 +65,7 @@
             <button type="button" id="modal-cancel" class="btn btn-default">Cancel</button>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -88,7 +88,7 @@
 
     <script>
       function save_data() {
-        alert('save_data'); 
+        alert('save_data');
         var name = document.getElementById("name");
         alert('name: ' + name.value);
         var birthday = document.getElementById("bday");
