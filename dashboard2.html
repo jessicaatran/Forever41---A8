@@ -58,7 +58,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-      
+
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -69,7 +69,7 @@
             <button type="button" id="modal-cancel" class="btn btn-default">Cancel</button>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -77,10 +77,10 @@
     <!-- bottom nav bar -->
     <nav id="bottom-nav-bar" class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
       <div id="iconContainer">
-        <i id="dashButton" class="fa fa-home fa-lg" aria-hidden="true"></i>
+        <i id="dashIcon" class="fa fa-home fa-lg" aria-hidden="true"></i>
       </div>
       <div id="iconContainer">
-        <i id="profButton" class="fa fa-user-o fa-lg" aria-hidden="true"></i>
+        <i id="profIcon" class="fa fa-user-o fa-lg" aria-hidden="true"></i>
       </div>
 
       <!-- <ul class="nav">
@@ -107,6 +107,20 @@
         var name = user[userIndex].name;
         $("h5").text(name);
       });
+
+      $("#dashIcon").click(function() {
+	       console.log("dashboard icon clicked"); // fix smart quote from slide!
+ 		     // tracker code here, refer to slide #26 and #27
+         tracker = ga.getAll()[0];
+         tracker.send('event', 'button', 'click');
+ 	     });
+
+       $("#profIcon").click(function() {
+         console.log("profile icon clicked"); // fix smart quote from slide!
+           // tracker code here, refer to slide #26 and #27
+          tracker = ga.getAll()[0];
+          tracker.send('event', 'button', 'click');
+        });
 
       renderConditions();
     </script>

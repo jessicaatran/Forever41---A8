@@ -78,10 +78,10 @@
     <nav id="bottom-nav-bar" class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
       <ul class="nav">
         <li class="nav-item">
-          <a type="button" class="nav-link" href="dashboard.html">Dashboard</a>
+          <a id="dashButton" type="button" class="nav-link" href="dashboard.html">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a type="button" class="nav-link" href="./profile.html">Profile</a>
+          <a id="profButton" type="button" class="nav-link" href="./profile.html">Profile</a>
         </li>
       </ul>
     </nav>
@@ -97,6 +97,20 @@
         var name = user[userIndex].name;
         $("h5").text(name);
       });
+
+      $("#dashButton").click(function() {
+	       console.log("dashboard button clicked"); // fix smart quote from slide!
+ 		     // tracker code here, refer to slide #26 and #27
+         tracker = ga.getAll()[0];
+         tracker.send('event', 'button', 'click');
+ 	     });
+
+       $("#profButton").click(function() {
+         console.log("profile button clicked"); // fix smart quote from slide!
+           // tracker code here, refer to slide #26 and #27
+          tracker = ga.getAll()[0];
+          tracker.send('event', 'button', 'click');
+        });
 
       renderConditions();
     </script>
