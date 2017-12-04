@@ -105,9 +105,36 @@ function getGender() {
 
 function getBirth() {
   var month = document.getElementById('month').value;
+
+  if (month === 'January') {
+    month = '01';
+  } else if (month === 'February') {
+    month = '02';
+  } else if (month === 'March') {
+    month = '03';
+  } else if (month === 'April') {
+    month = '04';
+  } else if (month === 'May') {
+    month = '05';
+  } else if (month === 'June') {
+    month = '06';
+  } else if (month === 'July') {
+    month = '07';
+  } else if (month === 'August') {
+    month = '08';
+  } else if (month === 'September') {
+    month = '09';
+  } else if (month === 'October') {
+    month = '10';
+  } else if (month === 'November') {
+    month = '11';
+  } else if (month === 'December') {
+    month = '12';
+  }
+
   var day = document.getElementById('day').value;
   var year = document.getElementById('year').value;
-  var birthdate = month + "/" + day + "/" + year;
+  var birthdate = year + '-' + month + '-' + day;
   // alert(birthdate);
 
   console.log('the user', users[userIndex]);
@@ -222,9 +249,37 @@ function displayProfile() {
   }
 }
 
+function renderEditProfile() {
+  var name = users[userIndex].name; 
+  var birthday = users[userIndex].birthday;
+  var gender = users[userIndex].gender;
+  var email = users[userIndex].email;
+
+  if (name) {
+    document.getElementById('name').value = name;
+  }
+
+  if (birthday) {
+    document.getElementById('bday').value = birthday;
+  }
+
+  if (users[userIndex].gender) {
+    if (users[userIndex].gender === 'Male') {
+      document.getElementById('male').checked = true;
+    } else {
+      document.getElementById('female').checked = true;
+    }
+  }
+
+  if (users[userIndex].email) {
+    document.getElementById('email').value = email;
+  }  
+
+}
+
 function saveEditProfile() {
   users[userIndex].name = localStorage.getItem('name');
-  users[userIndex].bday = localStorage.getItem('birthday');
+  users[userIndex].birthday = localStorage.getItem('birthday');
   users[userIndex].gender = localStorage.getItem('gender');
   users[userIndex].email = localStorage.getItem('email');
 
