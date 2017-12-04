@@ -58,6 +58,7 @@
 .card {
   width: 100%;
   height: 100px;
+  /*background: #ebf7f9;*/
 }
 
 #l {
@@ -89,8 +90,8 @@
 
 /*dashboard styling*/
 #dashboardBody {
-  /*background: linear-gradient(to top right, #52b7cd 0%, #a5cbcc 100%);*/
-  background: radial-gradient(white, #fcfcfc, #f2f2f2);
+  /*background: radial-gradient(white, #fcfcfc, #f2f2f2);*/
+  background: #f4f4f4;
 }
 
 /*DARKENS SELECTED DASHBOARD OR PROFILE*/
