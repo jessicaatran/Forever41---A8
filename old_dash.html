@@ -11,6 +11,7 @@
 
       gtag('config', 'UA-110160474-1');
     </script>
+
     <title>Forever 41</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   </head>
   <body id="dashboardBody">
     <!-- header -->
@@ -76,21 +76,14 @@
 
     <!-- bottom nav bar -->
     <nav id="bottom-nav-bar" class="navbar navbar-dark bg-dark fixed-bottom justify-content-center">
-      <div id="iconContainer">
-        <i id="dashIcon" class="fa fa-home fa-lg" aria-hidden="true"></i>
-      </div>
-      <div id="iconContainer">
-        <i id="profIcon" class="fa fa-user-o fa-lg" aria-hidden="true"></i>
-      </div>
-
-      <!-- <ul class="nav">
-        <li class="nav-item" id="dashButton">
-          <a type="button" class="nav-link" href="dashboard.html">Dashboard</a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a id="dashButton" type="button" class="nav-link" href="dashboard.html">Dashboard</a>
         </li>
-        <li class="nav-item" id="otherButton">
-          <a type="button" class="nav-link" href="./profile.html">Profile</a>
+        <li class="nav-item">
+          <a id="profButton" type="button" class="nav-link" href="./profile.html">Profile</a>
         </li>
-      </ul> -->
+      </ul>
     </nav>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -101,22 +94,19 @@
       $(document).ready(function() {
         var user = JSON.parse(localStorage.getItem('users'));
         var userIndex = localStorage.getItem('userIndex');
-        if (userIndex == -1) {
-          $('.container').html('<div class="card text-center" id="add"><div class="card-body"><h4 class="card-title">+</h4></div></div>')
-        }
         var name = user[userIndex].name;
         $("h5").text(name);
       });
 
-      $("#dashIcon").click(function() {
-	       console.log("dashboard icon clicked"); // fix smart quote from slide!
+      $("#dashButton").click(function() {
+	       console.log("dashboard button clicked"); // fix smart quote from slide!
  		     // tracker code here, refer to slide #26 and #27
          tracker = ga.getAll()[0];
          tracker.send('event', 'button', 'click');
  	     });
 
-       $("#profIcon").click(function() {
-         console.log("profile icon clicked"); // fix smart quote from slide!
+       $("#profButton").click(function() {
+         console.log("profile button clicked"); // fix smart quote from slide!
            // tracker code here, refer to slide #26 and #27
           tracker = ga.getAll()[0];
           tracker.send('event', 'button', 'click');

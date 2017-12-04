@@ -42,6 +42,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.fa {
+  padding: 1vw;
+}
+
 #card-col, #card-container {
    padding-right: 0px;
    padding-left: 0px;
@@ -127,3 +131,18 @@
   border-width: 1px;
   border-color: dark-grey;
 }
+
+/*Information pages styling*/
+#myTab {
+  /*background: linear-gradient(to top right, #68c3d2, #a5cbcc); /* Standard syntax */
+  border-width: thin;
+  border-color: #68c3d2
+}
+
+#myTab .nav-item a {
+    color: #68c3d2;
+}
+
+/*.tab-pane {
+  font-family: 'Lato';
+}*/

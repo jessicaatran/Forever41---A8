@@ -88,9 +88,7 @@
 
     <script>
       function save_data() {
-        alert('save_data');
         var name = document.getElementById("name");
-        alert('name: ' + name.value);
         var birthday = document.getElementById("bday");
         var gender = document.getElementById("gender");
         var email = document.getElementById("email");
@@ -101,7 +99,6 @@
         localStorage.setItem('email', email.value);
 
         saveEditProfile();
-
 
         // window.location.href = './profile.html';
 
