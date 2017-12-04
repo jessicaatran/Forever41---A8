@@ -210,8 +210,10 @@ function renderConditions() {
 function displayProfile() {
   console.log(localStorage);
   console.log(users[userIndex].name);
+  console.log(users[userIndex].bday);
+
   document.getElementById('name').innerHTML = 'Name: ' + users[userIndex].name;
-  document.getElementById('bday').innerHTML = 'Birthday: ' + users[userIndex].birthday;
+  document.getElementById('bday').innerHTML = 'Birthday: ' + users[userIndex].bday;
   document.getElementById('gender').innerHTML = 'Gender: ' + users[userIndex].gender;
   document.getElementById('email').innerHTML = 'Email: ' + users[userIndex].email;
 
@@ -220,6 +222,29 @@ function displayProfile() {
   for (var i = 0; i < myConditions.length; i++) {
     $("<li />").html(myConditions[i]).appendTo($('#my-conditions'));
   }
+}
+
+function renderEditProfile() {
+  // if (users[userIndex].name.value) {
+  console.log(users[userIndex].name);
+
+  if (users[userIndex].name) {
+    document.getElementById('name-input').value = users[userIndex].name;
+  }
+
+  if (users[userIndex].bday) {
+    document.getElementById('bday-input').value = users[userIndex].bday;
+  }
+
+  if (users[userIndex].gender) {
+    if (users[userIndex].gender)
+    document.getElementById('gender-input').value = users[userIndex].gender;
+  }
+
+  if (users[userIndex].email) {
+    document.getElementById('email-input').value = users[userIndex].email;
+  }  
+
 }
 
 function saveEditProfile() {

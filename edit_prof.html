@@ -33,13 +33,13 @@
       <img src="images/profpic2.jpg" class="img-fluid">
       <form action="./profile.html" onsubmit="save_data()" id="edit-form">
         <br>
-        Name: <input type="text" id="name"> <br>
-        Birthday: <input type="date" id="bday"> <br>
+        Name: <input type="text" id="name-input"> <br>
+        Birthday: <input type="date" id="bday-input"> <br>
         Gender: <br>
-          <input type="radio" id="gender" name="genderAnswer" value="Male" checked> Male<br>
-          <input type="radio" id="gender" name="genderAnswer" value="Female"> Female<br>
-          <input type="radio" id="gender" name="genderAnswer" value="Other"> Other <br>
-        Email: <input type="text" id="email"> <br><br>
+          <input type="radio" id="male-input" name="genderAnswer" value="Male"> Male<br>
+          <input type="radio" id="female-input" name="genderAnswer" value="Female"> Female<br>
+          <input type="radio" id="other-input" name="genderAnswer" value="Other"> Other <br>
+        Email: <input type="text" id="email-input"> <br><br>
         <input id="saveChanges" onclick="window.location.href = './profile.html';" type="submit" id="submit" value="Save Changes">
       </form>
       <br>
@@ -87,11 +87,16 @@
     <script src="./javascript/js.js"></script>
 
     <script>
+
+      renderEditProfile();
+
       function save_data() {
-        var name = document.getElementById("name");
-        var birthday = document.getElementById("bday");
-        var gender = document.getElementById("gender");
-        var email = document.getElementById("email");
+        var name = document.getElementById("name-input");
+        var birthday = document.getElementById("bday-input");
+        var gender = document.getElementById("gender-input");
+        var email = document.getElementById("email-input");
+
+        alert(name.value + ", " + birthday.value + ", " + gender.value + ", " + email.value);
 
         localStorage.setItem('name', name.value);
         localStorage.setItem('birthday', birthday.value);
